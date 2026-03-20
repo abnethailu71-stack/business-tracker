@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Business Tracker</title>
+        <link rel="manifest" href="manifest.json" />
+          <link rel="stylesheet" href="style.css" />
+          </head>
+          <body>
+
+            <header>
+                <h1>💼 Business Tracker</h1>
+                  </header>
+
+                    <main>
+                        <!-- Add Transaction Form -->
+                            <section class="card">
+                                  <h2>Add Transaction</h2>
+                                        <input type="number" id="amount" placeholder="Amount (e.g. 150.00)" />
+                                              <select id="category">
+                                                      <option value="income">💰 Income</option>
+                                                              <option value="expense">💸 Expense</option>
+                                                                    </select>
+                                                                          <input type="text" id="notes" placeholder="Notes (optional)" />
+                                                                                <input type="date" id="date" />
+                                                                                      <button onclick="addTransaction()">Add Transaction</button>
+                                                                                          </section>
+
+                                                                                              <!-- Summary -->
+                                                                                                  <section class="card summary">
+                                                                                                        <h2>Summary</h2>
+                                                                                                              <p>💰 Total Income: <span id="totalIncome">$0.00</span></p>
+                                                                                                                    <p>💸 Total Expenses: <span id="totalExpense">$0.00</span></p>
+                                                                                                                          <p>📊 Balance: <span id="balance">$0.00</span></p>
+                                                                                                                              </section>
+
+                                                                                                                                  <!-- Chart -->
+                                                                                                                                      <section class="card">
+                                                                                                                                            <h2>Chart</h2>
+                                                                                                                                                  <canvas id="myChart"></canvas>
+                                                                                                                                                      </section>
+
+                                                                                                                                                          <!-- Transaction List -->
+                                                                                                                                                              <section class="card">
+                                                                                                                                                                    <h2>Transactions</h2>
+                                                                                                                                                                          <ul id="transactionList"></ul>
+                                                                                                                                                                              </section>
+
+                                                                                                                                                                                  <!-- Backup Button -->
+                                                                                                                                                                                      <section class="card">
+                                                                                                                                                                                            <button onclick="backupToCSV()">☁️ Backup to CSV</button>
+                                                                                                                                                                                                </section>
+                                                                                                                                                                                                  </main>
+
+                                                                                                                                                                                                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                                                                                                                                                                                                      <script src="app.js"></script>
+                                                                                                                                                                                                      </body>
+                                                                                                                                                                                                      </html>
